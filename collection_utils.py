@@ -1,6 +1,7 @@
 class NestedValueNotFoundError(Exception):
     pass
 
+
 def get_in(collection, path, not_found=None):
     return _get_in(collection, path, lambda: not_found) if path else not_found
 
