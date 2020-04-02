@@ -4,6 +4,12 @@ _DevL's own standard library for Python 3._
 
 This library is intended to encompass utility functions, classes, and other _Good To Have_™ things.
 
+## Installation
+
+```sh
+pip install ormgrop
+```
+
 ## Available Modules
 
 <dl>
@@ -13,8 +19,9 @@ This library is intended to encompass utility functions, classes, and other _Goo
 
 ## About the Name
 
-_Ormgrop_ means _snake pit_ in Swedish.
+_Ormgrop_ means _snake pit_ in Swedish. It seems quite fitting for an eclectic library such as this.
 
 ## Further information
 
-See the [Github repository](https://github.com/DevL/ormgrop).
+See the [PyPI package page](https://pypi.org/project/ormgrop)
+or the [Github repository](https://github.com/DevL/ormgrop).
