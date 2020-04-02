@@ -2,7 +2,9 @@
 
 DevL's own standard library for Python 3.
 
-## get_in and require_in
+## Collections
+
+`get_in` and `require_in`
 
 Access values in nested Python structures that respond to the `[]` indexing syntax.
 

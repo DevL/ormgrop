@@ -1,45 +1,42 @@
 import pytest
 
-from collection_utils import get_in, require_in, NestedValueNotFoundError
+from src.collections import get_in, require_in, NestedValueNotFoundError
 
 
 TESTS_WITHOUT_SPECIFIED_DEFAULT_VALUE = {
-    "empty path returns None": (
-        {},
-        [],
-        None),
-    "empty collection returns None": (
-        {},
-        ["some", "path"],
-        None),
+    "empty path returns None": ({}, [], None),
+    "empty collection returns None": ({}, ["some", "path"], None),
     "an existing path returns the found value": (
         {"some": {"key": "value"}},
         ["some", "key"],
-        "value"),
-    "a wrong path returns None": (
-        {"some": {"other": "value"}},
-        ["some", "key"],
-        None),
+        "value",
+    ),
+    "a wrong path returns None": ({"some": {"other": "value"}}, ["some", "key"], None),
     "a nested list can be indexed": (
         {"some": {"list": ["value"]}},
         ["some", "list", 0],
-        "value"),
+        "value",
+    ),
     "an out of bound list index returns None": (
         {"some": {"list": []}},
         ["some", "list", 0],
-        None),
+        None,
+    ),
     "an illegal list index returns None": (
         {"some": {"list": []}},
         ["some", "list", "not_an_index"],
-        None),
+        None,
+    ),
     "a string as nested collection returns None": (
         "a string which is technically a list",
         ["some", "value"],
-        None),
+        None,
+    ),
     "a string with a single index as path returns that substring": (
         "a string which is technically a list",
         [0],
-        "a")
+        "a",
+    ),
 }
 
 
@@ -53,36 +50,37 @@ def test_get_in_without_specified_default_value(collection, path, expected):
 
 
 TESTS_WITH_SPECIFIED_DEFAULT_VALUE = {
-    "empty path returns the default value": (
-        {},
-        [],
-        "default",
-        "default"),
+    "empty path returns the default value": ({}, [], "default", "default"),
     "empty collection returns the default value": (
         {},
         ["some", "path"],
         "default",
-        "default"),
+        "default",
+    ),
     "a wrong path returns the default value": (
         {"some": {"other": "value"}},
         ["some", "key"],
         "default",
-        "default"),
+        "default",
+    ),
     "a wrong list index returns the default value": (
         {"some": {"list": []}},
         ["some", "list", 0],
         "default",
-        "default"),
+        "default",
+    ),
     "an illegal list index returns the default value": (
         {"some": {"list": []}},
         ["some", "list", "not_an_index"],
         "default",
-        "default"),
+        "default",
+    ),
     "a string as nested collection returns the default value": (
         "a string which is technically a list",
         ["some", "value"],
         "default",
-        "default"),
+        "default",
+    ),
 }
 
 
@@ -96,30 +94,24 @@ def test_get_in_with_specified_default_value(collection, path, default, expected
 
 
 TESTS_THAT_RAISES = {
-    "empty path raises": (
-        {},
-        [],
-        "not found"),
-    "empty collection raises": (
-        {},
-        ["some", "path"],
-        "not found"),
-    "a wrong path raises": (
-        {"some": {"other": "value"}},
-        ["some", "key"],
-        "not found"),
+    "empty path raises": ({}, [], "not found"),
+    "empty collection raises": ({}, ["some", "path"], "not found"),
+    "a wrong path raises": ({"some": {"other": "value"}}, ["some", "key"], "not found"),
     "an out of bound list index raises": (
         {"some": {"list": []}},
         ["some", "list", 0],
-        "not found"),
+        "not found",
+    ),
     "an illegal list index raises": (
         {"some": {"list": []}},
         ["some", "list", "not_an_index"],
-        "not found"),
+        "not found",
+    ),
     "a string as nested collection raises": (
         "a string which is technically a list",
         ["some", "value"],
-        "not found")
+        "not found",
+    ),
 }
 
 
