@@ -13,8 +13,9 @@ setup(
     description="DevL's own standard library for Python 3",
     long_description=readme,
     long_description_content_type="text/markdown",
-    url="https://github.com/DevL/ormgrop",
+    url="https://devl.github.io/ormgrop",
     author="Lennart Fridén",
+    license="MIT",
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
         "Intended Audience :: Developers",
@@ -30,8 +31,7 @@ setup(
     package_dir={"": "src"},
     packages=find_packages(where="src"),
     python_requires="~=3.5",
-    install_requires=[],
-    extras_require={"dev": [], "test": []},
+    extras_require={"test": ["pytest"]},
     project_urls={
         "Bug Reports": "https://github.com/DevL/ormgrop/issues",
         "Source": "https://github.com/DevL/ormgrop",

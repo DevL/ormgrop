@@ -1,6 +1,6 @@
 import pytest
 
-from src.collections import get_in, require_in, NestedValueNotFoundError
+from src.ormgrop.collections import get_in, require_in, NestedValueNotFoundError
 
 
 TESTS_WITHOUT_SPECIFIED_DEFAULT_VALUE = {
