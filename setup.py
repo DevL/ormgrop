@@ -4,14 +4,14 @@ from os import path
 here = path.abspath(path.dirname(__file__))
 
 with open(path.join(here, "README.md"), encoding="utf-8") as f:
-    long_description = f.read()
+    readme = f.read()
 
 
 setup(
     name="ormgrop",
     version="0.1.0",
     description="DevL's own standard library for Python 3",
-    long_description=long_description,
+    long_description=readme,
     long_description_content_type="text/markdown",
     url="https://github.com/DevL/ormgrop",
     author="Lennart Fridén",
