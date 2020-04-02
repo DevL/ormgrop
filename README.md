@@ -1,10 +1,14 @@
-# get_in
+# Ormgrop
+
+DevL's own standard library for Python 3.
+
+## get_in and require_in
 
 Access values in nested Python structures that respond to the `[]` indexing syntax.
 
 Inspired by of Elixir's `get_in`. If you squint.
 
-## Usage
+### Usage
 
 For "soft" getting a value, use `get_in(collection, path)` where path is a list of keys/indices. This function optionally takes a `default` value to be returned if the final key/index is not found. The default defaults to `None`.
 
