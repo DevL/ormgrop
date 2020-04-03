@@ -31,7 +31,7 @@ setup(
     package_dir={"": "src"},
     packages=find_packages(where="src"),
     python_requires="~=3.5",
-    extras_require={"test": ["pytest"]},
+    extras_require={"test": ["pytest", "pytest-describe"]},
     project_urls={
         "Bug Reports": "https://github.com/DevL/ormgrop/issues",
         "Source": "https://github.com/DevL/ormgrop",
