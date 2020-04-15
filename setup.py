@@ -22,7 +22,6 @@ setup(
         "Topic :: Software Development :: Libraries",
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
@@ -30,7 +29,7 @@ setup(
     keywords="utility library",
     package_dir={"": "src"},
     packages=find_packages(where="src"),
-    python_requires="~=3.5",
+    python_requires="~=3.6",
     extras_require={"test": ["pytest", "pytest-describe"]},
     project_urls={
         "Bug Reports": "https://github.com/DevL/ormgrop/issues",
