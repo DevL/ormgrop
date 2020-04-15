@@ -1,6 +1,12 @@
-# Ormgrop
+# Ormgrop ![Python package](https://github.com/DevL/ormgrop/workflows/Python%20package/badge.svg)
 
-DevL's own standard library for Python 3.
+_DevL's own standard library for Python 3._
+
+## Installation
+
+```sh
+pip install ormgrop
+```
 
 ## Collections
 
