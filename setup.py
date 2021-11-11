@@ -1,17 +1,17 @@
-from setuptools import setup, find_packages
 from os import path
+from setuptools import find_packages, setup
 
-here = path.abspath(path.dirname(__file__))
+HERE = path.abspath(path.dirname(__file__))
 
-with open(path.join(here, "README.md"), encoding="utf-8") as f:
-    readme = f.read()
+with open(path.join(HERE, "README.md"), encoding="utf-8") as f:
+    README = f.read()
 
 
 setup(
     name="ormgrop",
-    version="0.1.0",
+    version="0.2.0",
     description="DevL's own standard library for Python 3",
-    long_description=readme,
+    long_description=README,
     long_description_content_type="text/markdown",
     url="https://devl.github.io/ormgrop",
     author="Lennart Fridén",
