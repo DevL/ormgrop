@@ -1,5 +1,4 @@
 import pytest
-
 from src.ormgrop.collections import get_in, require_in, NestedValueNotFoundError
 
 
