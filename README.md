@@ -1,5 +1,7 @@
 # Ormgrop ![Python package](https://github.com/DevL/ormgrop/workflows/Python%20package/badge.svg)
 
+**NB:** This repository has been moved to [https://codeberg.org/DevL/ormgrop](https://codeberg.org/DevL/ormgrop).
+
 _DevL's own standard library for Python 3._
 
 ## Installation
